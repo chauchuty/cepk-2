@@ -1,1 +1,60 @@
-<h1>Hello World - Perododek</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b1020">
+<title>Ping-Pong vs Computador</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="hud">
+    <div class="score-box">
+      <span class="name">Você</span>
+      <span class="score" id="pScore">0</span>
+    </div>
+
+    <div class="hud-center">
+      <button class="icon-btn" id="btnPause" title="Pausar (Espaço)" aria-label="Pausar">⏸</button>
+      <span class="best">Melhor: <b id="bestScore">0</b></span>
+    </div>
+
+    <div class="score-box">
+      <span class="name" id="aiName">Veterano</span>
+      <span class="score" id="aiScore">0</span>
+    </div>
+  </header>
+
+  <main class="stage">
+    <div class="frame" id="frame">
+      <canvas id="game"></canvas>
+      <div class="overlay" id="overlay">
+        <h2 id="overlayTitle">Ping-Pong</h2>
+        <p id="overlayText">Vença o computador. Jogue até 11 pontos.</p>
+        <button class="btn primary" id="overlayBtn">Começar</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="controls">
+    <label class="field">
+      <span>Nível</span>
+      <select id="difficulty">
+        <option value="easy">Fácil</option>
+        <option value="normal" selected>Normal</option>
+        <option value="hard">Difícil</option>
+      </select>
+    </label>
+    <button class="btn" id="btnRestart">Reiniciar</button>
+    <button class="btn" id="btnSound">Som: ligado</button>
+    <button class="btn" id="btnFull">Tela cheia</button>
+  </footer>
+
+  <p class="hint">
+    Mouse ou toque e arraste para mover &nbsp;•&nbsp; Setas / W-S &nbsp;•&nbsp; Espaço pausa &nbsp;•&nbsp; R reinicia
+  </p>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
